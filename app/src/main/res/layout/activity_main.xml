@@ -1,0 +1,319 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+	android:background="@android:color/white"
+				android:id="@+id/layout1">
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/start_game"
+		android:id="@+id/startButton"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:onClick="OnClickStartButton"
+		android:textSize="15sp"
+		android:textStyle="bold"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="1"
+		android:id="@+id/number1"
+		android:layout_toLeftOf="@+id/number0"
+		android:layout_above="@+id/number0"
+		android:onClick="OnClickNumberButton"
+		android:textStyle="bold"
+		android:textSize="25sp"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="2"
+		android:id="@+id/number2"
+		android:layout_above="@+id/number0"
+		android:layout_alignLeft="@+id/number0"
+		android:onClick="OnClickNumberButton"
+		android:textStyle="bold"
+		android:textSize="25sp"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="3"
+		android:id="@+id/number3"
+		android:layout_toRightOf="@+id/number0"
+		android:layout_above="@+id/number0"
+		android:onClick="OnClickNumberButton"
+		android:textStyle="bold"
+		android:textSize="25sp"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="4"
+		android:id="@+id/number4"
+		android:layout_alignLeft="@+id/number1"
+		android:layout_above="@+id/number1"
+		android:onClick="OnClickNumberButton"
+		android:textStyle="bold"
+		android:textSize="25sp"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="5"
+		android:id="@+id/number5"
+		android:layout_alignLeft="@+id/number2"
+		android:layout_above="@+id/number2"
+		android:onClick="OnClickNumberButton"
+		android:textStyle="bold"
+		android:textSize="25sp"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="6"
+		android:id="@+id/number6"
+		android:layout_alignLeft="@+id/number3"
+		android:layout_above="@+id/number3"
+		android:onClick="OnClickNumberButton"
+		android:textStyle="bold"
+		android:textSize="25sp"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="7"
+		android:id="@+id/number7"
+		android:layout_alignLeft="@+id/number4"
+		android:layout_above="@+id/number4"
+		android:onClick="OnClickNumberButton"
+		android:textStyle="bold"
+		android:textSize="25sp"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="8"
+		android:id="@+id/number8"
+		android:layout_alignLeft="@+id/number5"
+		android:layout_above="@+id/number5"
+		android:onClick="OnClickNumberButton"
+		android:textStyle="bold"
+		android:textSize="25sp"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="9"
+		android:id="@+id/number9"
+		android:layout_alignLeft="@+id/number6"
+		android:layout_above="@+id/number6"
+		android:onClick="OnClickNumberButton"
+		android:textStyle="bold"
+		android:textSize="25sp"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="0"
+		android:id="@+id/number0"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:onClick="OnClickNumberButton"
+		android:textStyle="bold"
+		android:textSize="25sp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:id="@+id/answerDisplay"
+		android:layout_above="@+id/number8"
+		android:layout_centerHorizontal="true"
+		android:background="@android:color/black"
+		android:layout_marginBottom="10dp"
+		android:minWidth="100dp"
+		android:textAlignment="center"
+		android:maxLines="1"
+		android:gravity="center_horizontal"
+		android:textColor="@android:color/white"
+		android:maxLength="10"
+		android:textSize="25dp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:id="@+id/problemDisplay"
+		android:background="@android:color/black"
+		android:textSize="50dp"
+		android:maxLines="1"
+		android:layout_marginBottom="25dp"
+		android:textColor="@android:color/white"
+		android:layout_above="@+id/answerDisplay"
+		android:text="0"
+		android:maxLength="3"
+		android:minWidth="90dp"
+		android:gravity="right"
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentTop="false"
+		android:layout_alignParentBottom="false"
+		android:layout_alignRight="@+id/problemDisplay2"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="="
+		android:id="@+id/button"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentEnd="true"
+		android:onClick="OnClickAnswerProb"
+		android:textStyle="bold"
+		android:textColor="#ff0000ff"
+		android:textSize="25sp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="Score :"
+		android:id="@+id/scoreLabel"
+		android:layout_alignParentTop="true"
+		android:layout_marginTop="42dp"
+		android:layout_alignParentStart="true"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:id="@+id/scoreNum"
+		android:layout_alignBottom="@+id/scoreLabel"
+		android:layout_toRightOf="@+id/scoreLabel"
+		android:layout_toEndOf="@+id/scoreLabel"
+		android:layout_marginLeft="10dp"/>
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/bkspcButton"
+		android:text="X"
+		android:textStyle="bold"
+		android:layout_toRightOf="@+id/number9"
+		android:onClick="OnClickBackspace"
+		android:textColor="#ffff0000"
+		android:textSize="25dp"
+		android:layout_above="@+id/number9"
+		android:layout_marginLeft="-20dp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="Lives :"
+		android:id="@+id/livesLabel"
+		android:layout_below="@+id/scoreNum"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:id="@+id/livesNum"
+		android:layout_below="@+id/scoreNum"
+		android:layout_toRightOf="@+id/livesLabel"
+		android:layout_toEndOf="@+id/livesLabel"
+		android:layout_marginLeft="10dp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="Timer :  "
+		android:id="@+id/timerLabel"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:id="@+id/problemDisplay2"
+		android:background="@android:color/black"
+		android:textSize="50dp"
+		android:maxLines="1"
+		android:textColor="@android:color/white"
+		android:text="0"
+		android:minWidth="140dp"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="29dp"
+		android:layout_above="@+id/problemDisplay"
+		android:gravity="right"
+		/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:id="@+id/symbolDisplay"
+		android:background="@android:color/black"
+		android:textSize="50dp"
+		android:maxLines="1"
+		android:gravity="center_horizontal"
+		android:textColor="@android:color/white"
+		android:text="x"
+		android:maxLength="3"
+		android:minWidth="50dp"
+		android:layout_alignBottom="@+id/problemDisplay"
+		android:layout_toStartOf="@+id/number8"
+		android:layout_toLeftOf="@+id/problemDisplay"
+		/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="0"
+		android:id="@+id/TdsplySec"
+		android:layout_alignParentTop="true"
+		android:layout_toRightOf="@+id/timerLabel"
+		android:layout_toEndOf="@+id/timerLabel"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="."
+		android:id="@+id/dot"
+		android:layout_alignParentTop="true"
+		android:layout_toRightOf="@+id/TdsplySec"
+		android:layout_toEndOf="@+id/TdsplySec"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="0"
+		android:id="@+id/Tdsplymsec1"
+		android:layout_alignParentTop="true"
+		android:layout_toRightOf="@+id/dot"
+		android:layout_toEndOf="@+id/dot"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="0"
+		android:id="@+id/Tdsplymsec2"
+		android:layout_alignParentTop="true"
+		android:layout_toRightOf="@+id/Tdsplymsec1"
+		android:layout_toEndOf="@+id/Tdsplymsec1"/>
+
+</RelativeLayout>
